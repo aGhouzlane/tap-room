@@ -40,12 +40,10 @@ class KegControl extends React.Component {
     this.setState({ selectedKeg: selectedKeg });
   }
 
-  handleSubtractPint = (id) => {
+  handleBuyPint = (id) => {
     const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
-
     if (selectedKeg.pint > 0) {
       selectedKeg.pint -= 1;
-
       this.setState({ selectedKeg: selectedKeg });
     }
     else {
@@ -59,7 +57,7 @@ class KegControl extends React.Component {
     let buttonText = null;
 
     if (this.state.selectedKeg != null) {
-      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} subtractPint={this.handleSubtractPint} />
+      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} onBuyPint={this.handleBuyPint} />
       buttonText = "Return to Keg List";
     }
     else if (this.state.formVisibleOnPage) {
