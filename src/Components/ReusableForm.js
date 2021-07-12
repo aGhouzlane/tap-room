@@ -10,19 +10,24 @@ function ReusableForm(props) {
           Name:
           <input type="text" name="name" />
         </label>
+        <br/>
         <label>
           Brand:
           <input type="text" name="brand" />
         </label>
+        <br/>
         <label>
           Price:
           <input type="text" name="price" />
         </label>
+        <br/>
         <label>
-          AlcoholeContent:
+          Alcohole Content:
           <input type="text" name="alcoholeContent" />
         </label>
+        <br/>
         <input type="submit" value="Submit" />
+        <div style={{marginTop: '20px'}}></div>
       </form>
     </React.Fragment>
   );

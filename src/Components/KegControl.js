@@ -53,32 +53,37 @@ class KegControl extends React.Component {
     }
   }
 
-    render() {
+  render() {
 
-      let currentlyVisibleState = null;
-      let buttonText = null;
+    let currentlyVisibleState = null;
+    let buttonText = null;
 
-      if (this.state.selectedKeg != null) {
-        currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} subtractPint = {this.handleSubtractPint}/>
-        buttonText = "Return to Keg List";
-      }
-      else if (this.state.formVisibleOnPage) {
-        currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
-        buttonText = "Return to Keg List";
-
-      } else {
-        currentlyVisibleState = <KegList kegList={this.state.masterKegList}
-          onKegSelection={this.handleChangingSelectedKeg}  /> 
-        buttonText = "Add keg";
-      }
-
-      return (
-        <React.Fragment>
-          {currentlyVisibleState}
-          <button onClick={this.handleClick}>{buttonText}</button>
-        </React.Fragment>
-      );
+    if (this.state.selectedKeg != null) {
+      currentlyVisibleState = <KegDetail keg={this.state.selectedKeg} subtractPint={this.handleSubtractPint} />
+      buttonText = "Return to Keg List";
     }
-  }
+    else if (this.state.formVisibleOnPage) {
+      currentlyVisibleState = <NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />
+      buttonText = "Return to Keg List";
+    } else {
+      currentlyVisibleState = <KegList kegList={this.state.masterKegList}
+        onKegSelection={this.handleChangingSelectedKeg} />
+      buttonText = "Add keg";
+    }
 
-  export default KegControl;
+    const buttonStyle = {
+      marginTop: '20px'
+    }
+
+    return (
+      <React.Fragment>
+        {currentlyVisibleState}
+        <div>
+          <button onClick={this.handleClick}>{buttonText}</button>
+        </div>
+      </React.Fragment>
+    );
+  }
+}
+
+export default KegControl;
