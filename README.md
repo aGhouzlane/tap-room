@@ -12,7 +12,7 @@
 
 ## Description 📜
 
-A react application that allows users to add Kegs to a list. If users click on a keg, they will be redirected to a selected keg detail page; from there, users can buy pints and pint counter will decrease by 1 each time they click on Buy pint button.
+A react application that allows users to add Kegs to a list. When users click on a keg in the list, they will be redirected to a selected keg detail page; from there, users can buy pints and pint counter will decrease by 1 each time they click on Buy pint button.
 
 ## Setup/Installation Requirements 🏗
 
@@ -24,7 +24,7 @@ A react application that allows users to add Kegs to a list. If users click on a
 
 ## Component Diagram
 
-<img src="src/img/beer-keg.png">
+<img src="src/img/KegDiagram.png">
 
 ## License ⚖
 
