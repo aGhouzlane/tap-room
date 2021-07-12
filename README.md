@@ -6,7 +6,9 @@
 
 - _HTML_ 📝
 - _CSS_ 🎨
-- _Bootstrap_ 🥾
+- _React_
+- _JavaScript_
+- _NodeJs_
 - _Git_
 - _VSCode_
 
