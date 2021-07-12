@@ -22,6 +22,9 @@ A react application that allows users to add Kegs to a list. If users click on a
 4. Run command `npm i` 
 5. To run the project, rum command `npm run`
 
+## Component Diagram
+
+<img src="../../img/beer-keg.png">
 
 ## License ⚖
 
